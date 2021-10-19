@@ -19,9 +19,9 @@ $ git clone https://github.com/lvthillo/python-flask-docker.git
 [Jenkins.war](https://get.jenkins.io/war/2.316/jenkins.war)
 2. Open the terminal in the directory of the Jenkins client and run:
 ```
-java -jar jenkins.war --httpPort=8383
-http://localhost:8383
+$ java -jar jenkins.war --httpPort=8383
 ```
+3. Go to http://localhost:8383
 
 ### Create an Admin user for Jenkins:
 1. Setup the 1 time password for Jenkins from the installation log
@@ -54,8 +54,7 @@ GitHub hook trigger for GITScm polling, is not possible.
 
 # The application is running!
 
-### Original project repo
-### Original instrucations below:
+### Original project repo and instrucations below:
 ```
 $ git clone https://github.com/lvthillo/python-flask-docker.git
 $ docker build -t lvthillo/python-flask-docker .
