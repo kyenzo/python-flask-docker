@@ -15,39 +15,42 @@ The repository contains:
 $ git clone https://github.com/lvthillo/python-flask-docker.git
 ```
 ### Install Jenkins locally:
-Download the Jenkins client to your machine [Jenkins.war](https://get.jenkins.io/war/2.316/jenkins.war)
-Open the terminal in the directory of the Jenkins client and run:
+1. Download the Jenkins client to your machine 
+[Jenkins.war](https://get.jenkins.io/war/2.316/jenkins.war)
+2. Open the terminal in the directory of the Jenkins client and run:
 ```
 java -jar jenkins.war --httpPort=8383
 http://localhost:8383
 ```
 
 ### Create an Admin user for Jenkins:
-Setup the 1 time password for Jenkins from the installation log
-Example: bd389e2f59b040abaa45e2662514fb41
-Create an admin user
+1. Setup the 1 time password for Jenkins from the installation log
+2. Example: bd389e2f59b040abaa45e2662514fb41
+3. Create an admin user
 
 ### Add GitHub credentials to Jenkins:
-In the Jenkins Dashboard - Go to Manage Jenkins > Manage Credentials
-Click on the (Global) drop-down > Add Credentials
-Set up the GitHub Username and Password
-* The ID field is a placeholder for the password in the pipeline - Set to: GIT_HUB_CREDENTIALS
-Save
+1. In the Jenkins Dashboard - Go to Manage Jenkins > Manage Credentials
+2. Click on the (Global) drop-down > Add Credentials
+3. Set up the GitHub Username and Password
+* The ID field is a placeholder for the password in the pipeline - 
+Set to: GIT_HUB_CREDENTIALS
+4. Save
 
 ### Setup the Pipeline to the Jenkinsfile:
-In the Jenkins Dashboard - Click on New Item
-Insert a name and choose Pipeline
-Go to Pipeline section and choose Pipeline script from SCM, in the description
-SCM = Git
-Repository URL = https://github.com/kyenzo/python-flask-docker.git
-Choose the credentials you've created
+1. In the Jenkins Dashboard - Click on New Item
+2. Insert a name and choose Pipeline
+3. Go to Pipeline section and choose Pipeline script from SCM, in the description
+4. SCM = Git
+5. Repository URL = https://github.com/kyenzo/python-flask-docker.git
+6. Choose the credentials you've created
 
-* Since the Jenkins cliend is installed locally - GitHub hook trigger for GITScm polling, is not possible.
+* Since the Jenkins cliend is installed locally - 
+GitHub hook trigger for GITScm polling, is not possible.
 
 ### Run the Job and open the application on localhost:
-Make sure that the Docker engine is running
-Click build now
-Go to http://localhost:8787
+1. Make sure that the Docker engine is running
+2. Click build now
+3. Go to http://localhost:8787
 
 # The application is running!
 
