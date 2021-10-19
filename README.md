@@ -12,7 +12,7 @@ The repository contains:
 
 ### Clone the repository:
 ```
-$ git clone https://github.com/lvthillo/python-flask-docker.git
+$ git clone https://github.com/kyenzo/python-flask-docker
 ```
 ### Install Jenkins locally:
 1. Download the Jenkins client to your machine 
