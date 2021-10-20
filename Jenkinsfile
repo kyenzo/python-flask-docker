@@ -6,21 +6,21 @@ node {
     }
     
     stage("Run Unit tests"){
-        echo 'Unit tests...'
+        //echo 'Unit tests...'
     }
     
     stage("Build Docker Image"){
-        bat 'docker version'
-        bat 'docker build -t python-flask-docker .'
-        bat 'docker image list'
-        bat 'docker tag python-flask-docker kyenzo/python-flask-docker:python-flask-docker'
+        sh 'docker version'
+        sh 'docker build -t python-flask-docker .'
+        sh 'docker image list'
+        sh 'docker tag python-flask-docker kyenzo/python-flask-docker:python-flask-docker'
     } 
     
     stage("Run App Container"){
-        bat 'docker run --name my-app -d -p 8787:8787 kyenzo/python-flask-docker:python-flask-docker'
+        sh 'docker run --name my-app -d -p 8787:8787 kyenzo/python-flask-docker:python-flask-docker'
     }
     
-        stage("Run Integration tests"){
-        echo 'Integration tests...'
+    stage("Run Integration tests"){
+        //echo 'Integration tests...'
     }
 }
