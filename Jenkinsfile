@@ -6,13 +6,13 @@ node {
     }
     
     stage("Run Unit tests"){
-        //echo 'Unit tests...'
+        echo 'Unit tests...'
     }
     
     stage("Remove Previous Container"){
         sh 'docker rm -f my-app'
     }
-    
+
     stage("Build Docker Image"){
         sh 'docker version'
         sh 'docker build -t python-flask-docker .'
