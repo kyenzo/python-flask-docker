@@ -5,7 +5,7 @@ node {
         git credentialsId: 'GIT_HUB_CREDENTIALS', url: 'https://github.com/kyenzo/python-flask-docker.git'
     }
     
-    stage("Run Unit tests"){
+    stage("Run tests"){
         echo 'Unit tests...'
     }
     
@@ -22,9 +22,5 @@ node {
     
     stage("Run App Container"){
         sh 'docker run --name my-app -d -p 8787:8787 kyenzo/python-flask-docker:python-flask-docker'
-    }
-    
-    stage("Run Integration tests"){
-        //echo 'Integration tests...'
     }
 }
