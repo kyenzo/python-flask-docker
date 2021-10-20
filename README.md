@@ -1,6 +1,6 @@
 # python-flask-docker
-### The app is currently running in Jenkins on AWS: 
-### http://3.129.253.252:8080/job/python-app-pipeline/
+### The app is currently running on AWS: http://3.129.253.252:8787/
+### Jenkins job on AWS: http://3.129.253.252:8080/job/python-app-pipeline/
 
 The repository contains:
 1. Basic Python Flask app in Docker which prints the hostname and IP of the container
