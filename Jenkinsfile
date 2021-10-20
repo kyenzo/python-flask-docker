@@ -11,13 +11,13 @@ node {
     
     stage("Build Docker Image"){
         sh 'docker version'
-        sh 'sudo docker build -t python-flask-docker .'
+        sh 'docker build -t python-flask-docker .'
         sh 'docker image list'
-        sh 'sudo docker tag python-flask-docker kyenzo/python-flask-docker:python-flask-docker'
+        sh ' docker tag python-flask-docker kyenzo/python-flask-docker:python-flask-docker'
     } 
     
     stage("Run App Container"){
-        sh 'sudo docker run --name my-app -d -p 8787:8787 kyenzo/python-flask-docker:python-flask-docker'
+        sh 'docker run --name my-app -d -p 8787:8787 kyenzo/python-flask-docker:python-flask-docker'
     }
     
     stage("Run Integration tests"){
