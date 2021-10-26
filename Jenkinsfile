@@ -10,14 +10,14 @@ node {
     }
     
     stage("Remove Previous Container"){
-        sh 'sudo docker rm -f my-app'
+        sh 'docker rm -f my-app'
     }
 
     stage("Build Docker Image"){
-        sh 'sudo docker version'
-        sh 'sudo docker build -t python-flask-docker .'
-        sh 'sudo docker image list'
-        sh 'sudo docker tag python-flask-docker kyenzo/python-flask-docker:python-flask-docker'
+        sh 'docker version'
+        sh 'docker build -t python-flask-docker .'
+        sh 'docker image list'
+        sh 'docker tag python-flask-docker kyenzo/python-flask-docker:python-flask-docker'
     } 
     
     stage("Run App Container"){
